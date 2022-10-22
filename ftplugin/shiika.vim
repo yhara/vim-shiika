@@ -1,8 +1,6 @@
 " Vim filetype plugin
-" Language:		Ruby
-" Maintainer:		Tim Pope <vimNOSPAM@tpope.org>
-" URL:			https://github.com/vim-ruby/vim-ruby
-" Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
+" Language:		Shiika
+" Maintainer:		Yutaka Hara (https://github.com/yhara)
 
 if (exists("b:did_ftplugin"))
   finish

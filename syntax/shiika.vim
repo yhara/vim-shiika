@@ -1,13 +1,6 @@
 " Vim syntax file
-" Language:		Ruby
-" Maintainer:		Doug Kearns <dougkearns@gmail.com>
-" URL:			https://github.com/vim-ruby/vim-ruby
-" Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
-" ----------------------------------------------------------------------------
-"
-" Previous Maintainer:	Mirko Nasato
-" Thanks to perl.vim authors, and to Reimer Behrends. :-) (MN)
-" ----------------------------------------------------------------------------
+" Language:		Shiika
+" Maintainer:		Yutaka Hara (https://github.com/yhara)
 
 " Prelude {{{1
 if exists("b:current_syntax")
