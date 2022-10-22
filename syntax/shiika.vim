@@ -336,7 +336,7 @@ syn cluster rubyDeclaration contains=rubyAliasDeclaration,rubyAliasDeclaration2,
 " Keywords {{{1
 " TODO: reorganise
 syn match rubyControl	     "\%#=1\<\%(break\|in\|next\|redo\|retry\|return\)\>"
-syn match rubyKeyword	     "\%#=1\<\%(super\|yield\)\>"
+syn match rubyKeyword	     "\%#=1\<\%(let\|var\|super\|yield\)\>"
 syn match rubyBoolean	     "\%#=1\<\%(true\|false\)\>[?!]\@!"
 syn match rubyPseudoVariable "\%#=1\<\(self\|nil\)\>[?!]\@!"
 syn match rubyPseudoVariable "\%#=1\<__\%(ENCODING\|dir\|FILE\|LINE\|callee\|method\)__\>"
