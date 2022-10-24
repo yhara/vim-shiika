@@ -11,11 +11,6 @@ endif
 let s:cpo_sav = &cpo
 set cpo&vim
 
-" eRuby Config {{{1
-if exists('main_syntax') && main_syntax == 'eruby'
-  let b:ruby_no_expensive = 1
-endif
-
 " Folding Config {{{1
 if has("folding") && exists("ruby_fold")
   setlocal foldmethod=syntax
@@ -342,10 +337,8 @@ syn match rubyPseudoVariable "\%#=1\<\(self\|nil\)\>[?!]\@!"
 syn match rubyPseudoVariable "\%#=1\<__\%(ENCODING\|dir\|FILE\|LINE\|callee\|method\)__\>"
 syn match rubyBeginEnd	     "\%#=1\<\%(BEGIN\|END\)\>"
 
-" Expensive Mode {{{1
 " Match 'end' with the appropriate opening keyword for syntax based folding
 " and special highlighting of module/class/method definitions
-if !exists("b:ruby_no_expensive") && !exists("ruby_no_expensive")
   syn match rubyDefine "\<alias\>"  nextgroup=rubyAliasDeclaration			  skipwhite skipnl
   syn match rubyDefine "\<def\>"    nextgroup=rubyMethodDeclaration			  skipwhite skipnl
   syn match rubyDefine "\<undef\>"  nextgroup=rubyMethodName				  skipwhite skipnl
@@ -395,14 +388,6 @@ if !exists("b:ruby_no_expensive") && !exists("ruby_no_expensive")
     let ruby_minlines = 500
   endif
   exe "syn sync minlines=" . ruby_minlines
-
-else
-  syn match rubyControl "\<def\>"    nextgroup=rubyMethodDeclaration skipwhite skipnl
-  syn match rubyControl "\<class\>"  nextgroup=rubyClassDeclaration  skipwhite skipnl
-  syn match rubyControl "\<module\>" nextgroup=rubyModuleDeclaration skipwhite skipnl
-  syn match rubyControl "\<\%(case\|begin\|do\|for\|if\|unless\|while\|until\|else\|elsif\|rescue\|ensure\|then\|when\|end\)\>"
-  syn match rubyKeyword "\<\%(alias\|undef\)\>"
-endif
 
 " Special Methods {{{1
 if !exists("ruby_no_special_methods")
