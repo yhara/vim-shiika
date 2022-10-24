@@ -17,6 +17,7 @@ Vimrunner::RSpec.configure do |config|
   config.start_vim do
     vim = Vimrunner.start_gvim
     vim.prepend_runtimepath(File.expand_path('../..', __FILE__))
+    vim.command("runtime! ftdetect/*.vim")
     vim.add_plugin(File.expand_path('../vim', __FILE__), 'plugin/syntax_test.vim')
     vim.set 'expandtab'
     vim.set 'shiftwidth', 2
