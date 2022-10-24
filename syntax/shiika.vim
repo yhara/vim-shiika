@@ -368,7 +368,7 @@ syn match rubyBeginEnd	     "\%#=1\<\%(BEGIN\|END\)\>"
 
   " statements without 'do'
   SynFold 'begin' syn region rubyBlockExpression matchgroup=rubyControl     start="\<begin\>" skip="\<end:" end="\<end\>" contains=ALLBUT,@rubyNotTop
-  SynFold 'case'  syn region rubyCaseExpression  matchgroup=rubyConditional start="\<case\>"  skip="\<end:" end="\<end\>" contains=ALLBUT,@rubyNotTop
+  SynFold 'match' syn region rubyCaseExpression  matchgroup=rubyConditional start="\<match\>" skip="\<end:" end="\<end\>" contains=ALLBUT,@rubyNotTop
 
   SynFold 'if' syn region rubyConditionalExpression matchgroup=rubyConditional start="\%(\%(^\|\.\.\.\=\|[{:,;([<>~\*/%&^|+=-]\|\<then\s\|\%(\<\%(\h\|[^\x00-\x7F]\)\%(\w\|[^\x00-\x7F]\)*\)\@<![?!]\)\s*\)\@<=\%(if\|unless\)\>" skip="\<end:" end="\<end\>" contains=ALLBUT,@rubyNotTop
 
