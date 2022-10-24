@@ -23,7 +23,7 @@ Vimrunner::RSpec.configure do |config|
     vim
   end
 
-  def assert_correct_indenting(extension='rb', string)
+  def assert_correct_indenting(extension='sk', string)
     filename = "test.#{extension}"
 
     IO.write filename, string
@@ -35,7 +35,7 @@ Vimrunner::RSpec.configure do |config|
     expect(IO.read(filename)).to eq string
   end
 
-  def assert_correct_indent_in_insert(extension='rb', content, input, result)
+  def assert_correct_indent_in_insert(extension='sk', content, input, result)
     filename = "test.#{extension}"
 
     IO.write filename, content
@@ -48,7 +48,7 @@ Vimrunner::RSpec.configure do |config|
     expect(IO.read(filename)).to eq result
   end
 
-  def assert_correct_highlighting(extension='rb', string, patterns, group)
+  def assert_correct_highlighting(extension='sk', string, patterns, group)
     filename = "test.#{extension}"
 
     IO.write filename, string
