@@ -573,7 +573,7 @@ hi def link rubyGlobalVariableError	rubyError
 hi def link rubySpaceError		rubyError
 
 " Postscript {{{1
-let b:current_syntax = "ruby"
+let b:current_syntax = "shiika"
 
 let &cpo = s:cpo_sav
 unlet! s:cpo_sav
