@@ -83,10 +83,10 @@ let s:skip_expr =
 " Regex used for words that, at the start of a line, add a level of indent.
 let s:ruby_indent_keywords =
       \ '^\s*\zs\<\%(module\|class\|if\|for' .
-      \   '\|while\|until\|else\|elsif\|case\|when\|in\|unless\|begin\|ensure\|rescue' .
+      \   '\|while\|until\|else\|elsif\|match\|when\|in\|unless\|begin\|ensure\|rescue' .
       \   '\|\%(\K\k*[!?]\?\s\+\)\=def\):\@!\>' .
       \ '\|\%([=,*/%+-]\|<<\|>>\|:\s\)\s*\zs' .
-      \    '\<\%(if\|for\|while\|until\|case\|unless\|begin\):\@!\>'
+      \    '\<\%(if\|for\|while\|until\|match\|unless\|begin\):\@!\>'
 
 " Def without an end clause: def method_call(...) = <expression>
 let s:ruby_endless_def = '\<def\s\+\k\+[!?]\=\%((.*)\|\s\)\s*='
@@ -100,7 +100,7 @@ let s:ruby_deindent_keywords =
 " TODO: the do here should be restricted somewhat (only at end of line)?
 let s:end_start_regex =
       \ '\C\%(^\s*\|[=,*/%+\-|;{]\|<<\|>>\|:\s\)\s*\zs' .
-      \ '\<\%(module\|class\|if\|for\|while\|until\|case\|unless\|begin' .
+      \ '\<\%(module\|class\|if\|for\|while\|until\|match\|unless\|begin' .
       \   '\|\%(\K\k*[!?]\?\s\+\)\=def\):\@!\>' .
       \ '\|\%(^\|[^.:@$]\)\@<=\<do:\@!\>'
 

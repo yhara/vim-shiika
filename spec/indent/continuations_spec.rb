@@ -80,7 +80,7 @@ describe "Indenting" do
 
       assert_correct_indenting <<~EOF
         variable = # evil comment
-          case something
+          match something
           when 'something'
             something_else
           else
@@ -89,7 +89,7 @@ describe "Indenting" do
       EOF
 
       assert_correct_indenting <<~EOF
-        variable = case something
+        variable = match something
                    when 'something'
                      something_else
                    else
@@ -125,7 +125,7 @@ describe "Indenting" do
       vim.command 'let g:ruby_indent_assignment_style = "variable"'
 
       assert_correct_indenting <<~EOF
-        variable = case something # evil comment
+        variable = match something # evil comment
         when 'something'
           something_else
         else
